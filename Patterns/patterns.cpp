@@ -76,6 +76,123 @@ void pattern5(int n){
     //      * * * 
 }
 
+void pattern6(int n){
+    for( int i = 1; i <=n; i++){
+        for ( int j = 0; j < i; j++ ){
+            cout << i << " ";
+        }
+        cout << endl;
+    }
+    // OUTPUT:
+    //      1
+    //      2 2
+    //      3 3 3
+}
+
+
+void pattern7(int n){
+    char ch = 'A';
+    for( int i = 0; i < n; i++ ){
+        for (int j = 0; j <= i; j++ ) {
+            cout << ch << " ";
+        }
+        ch += 1;
+        cout << endl;
+    }
+    // OUTPUT: 
+    //      A 
+    //      B B 
+    //      C C C 
+}
+
+void pattern8(int n){
+    for( int i = 1; i <=n; i++){
+        for ( int j = 0; j < i; j++ ){
+            cout << j+1 << " ";
+        }
+        cout << endl;
+    }
+    // OUTPUT:
+    //      1
+    //      1 2
+    //      1 2 3
+}
+
+void pattern9(int n){
+    for (int i = 1; i <= n; i++){
+        for ( int j = i; j > 0; j-- ){
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+    // OUTPUT:
+    //      1
+    //      2 1
+    //      3 2 1
+}
+
+void pattern10(int n){
+    int num = 1;
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j <= i; j++){
+            cout << num << " ";
+            num += 1;
+        }
+        cout << endl;
+    }
+    // OUTPUT:
+    //      1
+    //      2 3
+    //      4 5 6
+}
+
+void pattern11(int n){
+    for (int i = 0; i < n; i++){
+        // spaces
+        for (int j = 0; j < i; j++){
+            cout << " ";
+        }
+        //numbers
+        for (int j = 0; j < n - i; j++){
+            cout << i+1;
+        }
+        cout << endl;
+    }
+    // OUTPUT:
+    //      1 1 1
+    //        2 2
+    //          3
+
+    // If you are revising this, then try the same pattern with alphabets.
+}
+
+void pattern12(int n){
+    for(int i = 0; i < n; i++){
+        //spaces
+        for(int j = n-1; j > i; j-- ){
+            cout << " ";
+        }
+
+        //numbers
+        for(int j = 0; j < i + 1; j++){
+            cout << j+1;
+        }
+
+        //numbers
+        for (int j = i; j > 0; j--) {
+            cout << j;
+        }
+        cout << endl;
+
+
+        // OUTPUT:
+        //        1
+        //       121
+        //      12312  
+        //     1234123
+    }
+}
+
 int main() {
     cout << "Enter a number: ";
     int input;
@@ -84,5 +201,13 @@ int main() {
     // pattern2(input);
     // pattern3(input);
     // pattern4(input);
-    pattern5(input);
+    // pattern5(input);
+    // pattern6(input);
+    // pattern7(input);
+    // pattern8(input);
+    // pattern9(input);
+    // pattern10(input);
+    // pattern11(input);
+    pattern12(input);
+
 }

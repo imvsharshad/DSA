@@ -193,6 +193,133 @@ void pattern12(int n){
     }
 }
 
+void pattern13(int n){
+    for(int i = 0; i < n; i++){
+        // spaces
+        for(int j = 0; j < n -i-1; j++){
+            cout << " ";
+        }
+
+        // stars
+        cout << "*";
+        
+        // spaces
+        if ( i != 0 ){
+            for(int j = 0; j < (2*i-1); j++){
+                cout << " ";
+            }
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    // Above code will give the output :
+        //              *
+        //             * *
+        //            *   *
+        //           *     *
+
+    for ( int i = n - 1; i > 0; i--){
+        // spaces
+        for( int j = n - 1; j >= i; j--){
+            cout << " ";
+        }
+
+        // stars
+        cout << "*";
+
+        // spaces
+        if ( i != 1 ) {
+            for ( int j = 0; j < 2*i-3; j++) {
+                cout << " ";
+            }
+
+            // starts
+            cout << "*";
+        }
+        cout << endl;
+        // Above code will give the output :
+        //           *   *
+        //            * *
+        //             *
+    }
+    // FINAL OUTPUT:
+    //                *
+    //               * *
+    //              *   *
+    //             *     *
+    //            *       *
+    //             *     *
+    //              *   *
+    //               * *
+    //                *
+
+}
+
+void pattern14(int n){
+    // Butterfly Pattern
+
+    // top half
+    for (int i = 0; i < n; i++){
+        // stars
+        for ( int j = 0; j <= i; j++){
+            cout << "*";
+        }
+
+        // spaces
+        for ( int j = n - 1; j > i; j-- ){
+            cout << " ";
+        }
+
+        // spaces
+        for ( int j = n - 1; j > i; j--){
+            cout << " ";
+        }
+
+        // stars
+        for ( int j = 0; j <=i; j++ ){
+            cout << "*";
+        }
+
+
+        cout << endl;
+    }
+
+    // bottom half
+    for ( int i = 0; i < n; i++ ){
+        // stars
+        for( int j = n; j > i; j--){
+            cout << "*";
+        }
+
+        //spaces
+        for( int j = 0; j < i; j++){
+            cout << " ";
+        }
+
+        // spaces
+        for( int j = 0; j < i; j++){
+            cout << " ";
+        }
+
+        // stars
+        for( int j = n; j > i; j--){
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    //   OUTPUT:
+    //          *      *
+    //          **    **
+    //          ***  ***
+    //          ********
+    //          ********
+    //          ***  ***
+    //          **    **
+    //          *      *
+}
+
 int main() {
     cout << "Enter a number: ";
     int input;
@@ -208,6 +335,8 @@ int main() {
     // pattern9(input);
     // pattern10(input);
     // pattern11(input);
-    pattern12(input);
+    // pattern12(input);
+    // pattern13(input);  // Hollow Diamond Pattern
+    pattern14(input);
 
 }

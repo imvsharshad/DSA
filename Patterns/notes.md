@@ -16,3 +16,4 @@ Floyd's Triangle Pattern:
 7 8 9 10
 
 function - pattern10 in both cpp and py is the code for Floyd's traingle
+function - pattern13 is a hollow pyramid - has a bit complex logic. Try to solve it again later.

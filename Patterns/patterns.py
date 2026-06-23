@@ -148,6 +148,40 @@ def pattern12(n):
         #       12312  
         #      1234123
         
+def pattern13(n):
+    for i in range(n):
+        #spaces
+        for j in range(n-1, i, -1):
+            print(" ", end="")
+        
+        #stars
+        print("*", end="")
+        
+        if( i != 0 ):
+            #spaces
+            for j in range(0, 2*i-1, +1):
+                print(" ", end="")
+                
+            #stars
+            print("*", end="")
+        
+        print()
+    
+    for i in range(n-1):
+        # spaces
+        for j in range(0, i +1, +1):
+            print(" ", end="")
+            
+        # starts
+        print("*", end="")
+        
+        if ( i != n -2 ):
+            # spaces
+            for j in range(0, 2*(n-i)-5, +1):
+                print(" ", end="")    
+            # stars
+            print("*") 
+        
 
 input_number = int(input("Enter a number: "))
 # pattern1(input_number)
@@ -161,4 +195,5 @@ input_number = int(input("Enter a number: "))
 # pattern9(input_number)
 # patten10(input_number)
 # pattern11(input_number)
-pattern12(input_number)
+# pattern12(input_number)
+pattern13(input_number)
